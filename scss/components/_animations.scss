@@ -1,0 +1,11 @@
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); /* Inicio, puntos intermedios y final: posición original */
+  }
+  40% {
+    transform: translateY(-10px); /* Punto de rebote hacia arriba */
+  }
+  60% {
+    transform: translateY(-5px); /* Punto de rebote hacia abajo */
+  }
+}

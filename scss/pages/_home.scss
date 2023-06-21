@@ -1,0 +1,104 @@
+#section {
+  &-title-ship-pay-methods {
+    .jl {
+      &-content h2 {
+        text-align: center;
+        line-height: auto;
+        padding: var(--spacing-t);
+      }
+    }
+  }
+  &-ship-pay-methods {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: auto;
+      background-color: var(--jl-gray-color);
+      z-index: -1;
+    }
+    .jl {
+      &-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        &__img {
+          order: 1;
+          width: 30%;
+          img {
+            width: auto;
+            max-width: 80%;
+            padding: var(--spacing-b);
+          }
+        }
+        &__link {
+          order: 2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 30%;
+          &-item {
+            display: inline-block;
+            width: auto;
+            margin: var(--spacing-x);
+            perspective: 1000px;
+            position: relative;
+            transition: ease .3s all;
+            animation: bounce infinite 1s;
+            transform-origin: center bottom;
+            &:hover {
+              animation-play-state: paused;
+              .jl-content__link-item--coin { 
+                transform: rotateY(160deg); 
+              }
+            }
+            &:nth-child(1) .jl-content__link-item--coin { 
+              background-color: var(--jl-primary-color); 
+            }
+            &:nth-child(2) .jl-content__link-item--coin { 
+              background-color: var(--jl-secondary-color); 
+              img { 
+                filter: grayscale(1) brightness(1000%) contrast(0); 
+              } 
+            }
+            &--coin {
+              transition: transform .6s;
+              display: block;
+              width: 100px;
+              height: 100px;
+              padding: 1.5rem;
+              border-radius: 50%;
+              box-shadow: 0px 0px 5px rgba($secondary-color, .5);
+              img {
+                width: auto;
+                max-width: 100%;
+              }
+            }
+          }
+        }
+        &__description {
+          order: 3;
+          display: flex;
+          flex-direction: column;
+          width: 30%;
+          text-align: right;
+          h4 {
+            margin: var(--spacing-y);
+            padding: 0;
+            color: var(--jl-primary-color);
+            line-height: auto;
+          }
+          p {
+            margin: var(--spacing-t);
+          }
+        }
+      }
+    }
+  }
+}
