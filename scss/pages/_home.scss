@@ -23,6 +23,9 @@
       z-index: -1;
     }
     .jl {
+      &-container {
+        margin-bottom: 3rem;
+      }
       &-content {
         display: flex;
         flex-direction: row;
@@ -96,6 +99,144 @@
           }
           p {
             margin: var(--spacing-t);
+          }
+        }
+      }
+    }
+  }
+  &-about-us {
+    .jl {
+      &-container {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+      }
+      &-content {
+        position: relative;
+        overflow: hidden;
+        height: 75vh;
+        border-radius: 15px;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:hover  {
+          .jl-content__sidebar, .jl-content__link {
+            margin-left: 0%;
+            &-item h2, &-item p {
+              opacity: 1;
+              transition: ease .05s all;
+              transition-delay: 1s;
+            }
+            a {
+              opacity: 1;
+              transition: ease .1s all;
+              transition-delay: 1s;
+            }
+          }
+          .jl-content__slider {
+            transition: ease .1s all;
+            transition-delay: .1s all;
+            filter: blur(5px) grayscale(100%) brightness(50%);
+            animation-play-state: paused;
+          }
+        }
+        &__slider {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          object-fit:fill;
+          object-position: center;
+          filter: grayscale(100%) brightness(50%);
+        }
+        &__link {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 70%;
+          height: 100%;
+          min-height: 75vh;
+          z-index: 2;
+          margin-left: 100%;
+          a {
+            opacity: 0;
+            background-color: rgba($tertiary-color, .5);
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transition: ease 1s all;
+            &::after {
+              content: "";
+              position: absolute;
+              width: 65px;
+              height: 65px;
+              top: 5px;
+              left: 5px;
+              border-radius: 50%;
+              background-color: rgba($primary-color, .75);
+              z-index: 3;
+              display: block;
+              box-shadow: 0px 0px 5px rgba($secondary-color, .5);
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              width: 85px;
+              height: 85px;
+              top: -5px;
+              left: -5px;
+              border-radius: 50%;
+              background-color: rgba($primary-color, .25);
+              z-index: 2;
+              display: block;
+              box-shadow: 0px 0px 5px rgba($secondary-color, .5);
+            }
+            i, svg {
+              color: var(--jl-tertiary-color);
+              z-index: 4;
+            }
+            &:hover i, svg {
+              transform: scale(1.1);
+            }
+          }
+        }
+        &__sidebar {
+          position: relative;
+          display: block;
+          z-index: 2;
+          margin-left: 100%;
+          width: 30%;
+          height: 100%;
+          min-height: 75vh;
+          transition: ease .5s all;
+          background-color: var(--jl-tertiary-color);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 3rem;
+          border-top-left-radius: 15px;
+          border-bottom-left-radius: 15px;
+          box-shadow: 1px 0px 5px rgba($secondary-color, .5);
+          &-item {
+            text-align: right;
+            h2 {
+              color: var(--jl-primary-color);
+              opacity: 0;
+            }
+            p {
+              color: var(--jl-secondary-color);
+              opacity: 0;
+            }
           }
         }
       }
