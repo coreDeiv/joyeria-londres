@@ -77,28 +77,6 @@ h1, h2, h3, h4, h5, h6 {
             transform: translateY(-5px); /* Punto de rebote hacia abajo */
   }
 }
-@-webkit-keyframes sliderSmooth {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    opacity: 0;
-  }
-}
-@keyframes sliderSmooth {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    opacity: 0;
-  }
-}
 #section-title-ship-pay-methods .jl-content h2 {
   text-align: center;
   line-height: auto;
