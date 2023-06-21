@@ -1,0 +1,16 @@
+.jl {
+  &-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    &-fluid {
+      width: auto;
+      max-width: 100%;
+    }
+    &-stretch {
+      width: 40%;
+      margin: auto;
+      background-color: #ccc;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+// Abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/placeholders";
+
+// Base
+@import "base/grid";
+@import "base/reset";
+
+// Components
+@import "components/buttons";
+
+// Pages
+@import "pages/home";
+
+// Themes
+@import "themes/odoo";
+
+// Vendors
+@import "vendors/bootstrap";
+

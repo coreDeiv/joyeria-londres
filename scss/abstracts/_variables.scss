@@ -1,0 +1,42 @@
+/* Colors*/
+$primary-color:               #AB8F3D !default;
+$secondary-color:             #000000 !default;
+$tertiary-color:              #FFFFFF !default;
+
+:root {
+  
+  // Colors
+  --jl-primary-color:    #AB8F3D;
+  --jl-secondary-color:  #000000;
+  --jl-tertiary-color:   #FFFFFF;
+
+  // Other Variables
+  --spacing-z:             1rem;
+  --spacing-x:             0rem 1rem;
+  --spacing-y:        calc(1rem - 5px) 0rem;
+
+}
+
+/* SIzes for media queries */
+$breakpoints: (
+  // Phones
+  "phone-xxs":                  320px,
+  "phone-xs":                   375px,
+  "phone-s":                    420px,
+  "phone-m":                    580px,
+  "phone-l":                    640px,
+  "phone-xl":                   800px,
+
+  // Tablets
+  "tablet-s":                   820px,
+  "tablet-m":                   900px,
+  "tablet-l":                   980px,
+
+  // Desktop
+  "desktop-xs":                1024px,
+  "desktop-s":                 1140px,
+  "desktop-md":                1280px,
+  "desktop-l":                 1360px,
+  "desktop-xl":                1440px,
+  "desktop-xxl":               1980px
+);

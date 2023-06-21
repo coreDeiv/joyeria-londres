@@ -1,0 +1,30 @@
+// Media Queries
+@mixin mq($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == min {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  } @else {
+    @warn 'No hay un tamanio #{$width} definido';
+  }
+  // @include mq( {{ $breakpoint }}, {{ @'min' or @'max' }} ) { @content }
+}
+
+// Meadia Queries for landscape
+@mixin mq-l($width, $type: max){
+  $width: map_get($breakpoints, $width);
+  @media (#{$type}-width: $width) and (orientation: landscape) {
+    @content;
+  }
+  // @include mq-l( {{ $brekpoint }} ) { @content }
+}
+
+// MIxin for font-sizes, convert px to rem, font-base '16px'
+@mixin font-size($size) {
+  font-size: calc($size / 16) * 1rem;
+  // @include font-size(24px);
+}
