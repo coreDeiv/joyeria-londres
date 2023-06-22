@@ -44,6 +44,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: auto;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 .jl-button {
   display: inline-block;
 }
