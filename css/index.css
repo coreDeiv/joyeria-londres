@@ -81,6 +81,26 @@ body {
             transform: translateY(-5px); /* Punto de rebote hacia abajo */
   }
 }
+@-webkit-keyframes socialRotate {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(0dg);
+            transform: translate3d(0, 0, 0) rotate(0dg);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(360deg);
+            transform: translate3d(0, 0, 0) rotate(360deg);
+  }
+}
+@keyframes socialRotate {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(0dg);
+            transform: translate3d(0, 0, 0) rotate(0dg);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(360deg);
+            transform: translate3d(0, 0, 0) rotate(360deg);
+  }
+}
 #section-title-ship-pay-methods .jl-content h2 {
   text-align: center;
   line-height: auto;
@@ -391,4 +411,74 @@ body {
 #section-about-us .jl-content__sidebar-item p {
   color: var(--jl-secondary-color);
   opacity: 0;
+}
+#section-social-media .jl-container {
+  display: block;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+#section-social-media .jl-row {
+  width: 100%;
+}
+#section-social-media .jl-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#section-social-media .jl-content__item {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#section-social-media .jl-content__item-link:hover {
+  -webkit-transition: ease 0.3s all;
+  transition: ease 0.3s all;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+#section-social-media .jl-content__item-link:hover .jl-content__icon i, #section-social-media .jl-content__item-link:hover svg {
+  -webkit-transition: ease 0.3s all;
+  transition: ease 0.3s all;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: var(--jl-primary-color);
+  text-shadow: none;
+}
+#section-social-media .jl-content__item-link:hover .jl-content__img {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+#section-social-media .jl-content__img {
+  -webkit-animation: socialRotate 15s infinite;
+          animation: socialRotate 15s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  z-index: 1;
+}
+#section-social-media .jl-content__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+#section-social-media .jl-content__icon i, #section-social-media .jl-content__icon svg {
+  font-size: 2rem;
+  color: var(--jl-tertiary-color);
+  text-shadow: 1px 1px 0 var(--jl-primary-color), -1px -1px 0 var(--jl-primary-color), -1px 1px 0 var(--jl-primary-color), 1px -1px 0 var(--jl-primary-color);
 }
